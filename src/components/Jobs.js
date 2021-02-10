@@ -25,7 +25,6 @@ const query = graphql`
 
 const Jobs = () => {
   const data = useStaticQuery(query);
-  console.log(data);
   const {allStrapiJobs:{nodes:jobs}} = data;
   const [value,setValue] = React.useState(0);
   const {company,position,date,description} = jobs[value];
@@ -53,7 +52,7 @@ const Jobs = () => {
                 <p className="job-date">{date}</p>
                 {
                   description.map((item)=>{
-                    return <div key={item.id} className="job-desc">
+                    return <div key={item.id} className="job-desc ">
                       <FaAngleDoubleRight className="job-icon"></FaAngleDoubleRight>
                       <p>{item.name}</p>
                     </div>
