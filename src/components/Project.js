@@ -31,16 +31,16 @@ const Project = ({description,title,github,stack,site,image,index}) => {
   )
 }
 
-Project.propTypes = {
-  title: PropTypes.string.isRequired,
-  github: PropTypes.string.isRequired,
-  site: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  image: PropTypes.object.isRequired,
-  stack: PropTypes.arrayOf(PropTypes.object).isRequired,
+// Project.propTypes = {
+//   title: PropTypes.string.isRequired,
+//   github: PropTypes.string.isRequired,
+//   site: PropTypes.string.isRequired,
+//   description: PropTypes.string.isRequired,
+//   image: PropTypes.object.isRequired,
+//   stack: PropTypes.arrayOf(PropTypes.object).isRequired,
 
 
 
-}
+// }
 
 export default Project
