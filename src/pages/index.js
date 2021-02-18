@@ -6,22 +6,25 @@ import Services from "../components/Services"
 import Jobs from "../components/Jobs"
 import Projects from "../components/Projects"
 import Blogs from "../components/Blogs"
-export default ({data}) => {
+import SEO from "../components/SEO"
 
+export default ({data}) => {
 
   //imagenes optimizads cloudinary
 
   const {allStrapiProjects:{nodes:projects},allStrapiBlogs:{nodes:blogs}} = data;
 
   return (<Layout>
-    <Hero></Hero>
-    <Services/>
-    <Jobs/>
-    <Projects projects={projects} title="featured projects" showLink/>
-    <Blogs blogs={blogs} title="latest articles" showLink/>
-  </Layout>)
+            <SEO title="HOME"/>
+            <Hero/>
+            <Services/>
+            <Jobs/>
+            <Projects projects={projects} title="featured projects" showLink/>
+            <Blogs blogs={blogs} title="latest articles" showLink/>
+          </Layout>
+        )
 }
-// ...GatsbyImageSharpFluid
+
 export const query = graphql`{
   allStrapiProjects(filter: {feature: {eq: false}}) {
     nodes {
