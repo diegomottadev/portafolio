@@ -16,6 +16,8 @@ const query = graphql`
         name
         id
       }
+      company_short
+      place
     }
   }
 }
@@ -27,11 +29,11 @@ const Jobs = () => {
   const data = useStaticQuery(query);
   const {allStrapiJobs:{nodes:jobs}} = data;
   const [value,setValue] = React.useState(0);
-  const {company,position,date,description} = jobs[value];
+  const {company,position,date,description,place,company_short} = jobs[value];
 
   return (
       <section className="section jobs">
-          <Title title="Experiences"/>
+          <Title title="Experiencias"/>
           <div className="jobs-center">
             {/* btn container*/}
             <div className="btn-container">
@@ -41,7 +43,7 @@ const Jobs = () => {
                           onClick={()=>setValue(index)}
                           className={`job-btn ${index===value && 
                           'active-btn'}`}> 
-                          {item.company}
+                          {item.company_short}
                           </button>
                   )
               })}
@@ -49,7 +51,8 @@ const Jobs = () => {
             <article className="job-info">
                 <h3>{position}</h3>
                 <h4>{company}</h4>
-                <p className="job-date">{date}</p>
+                <h5 className="job-date">{date}{' | '}{place}</h5>
+                <br></br>
                 {
                   description.map((item)=>{
                     return <div key={item.id} className="job-desc ">
@@ -61,7 +64,7 @@ const Jobs = () => {
             </article>
           </div>
           <Link to="/about" className="btn center-btn">
-             More info
+             Sobre mi
           </Link>
       </section>
     )

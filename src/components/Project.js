@@ -10,20 +10,25 @@ const Project = ({description,title,github,stack,site,image,index}) => {
          }
         <div className="project-info">
           <span className="project-number"> {index + 1}</span>
-          <h3>{title || "defaul title"}</h3>
+          <h3 className="project-title">{title || "defaul title"}</h3>
           <p className="project-desc">{description}</p>
-          <div className="project-stack">
+          <div className="about-stack">
             {stack.map((item)=>{
               return <span key={item.id}>{item.skill}</span>
             })}
           </div>
+          <br></br>
         <div className="project-links">
           <a href={github}>
             <FaGithubSquare className="project-icon"/>
           </a>
-          <a href={site}>
+          {
+            site !== null &&
+            <a href={site}>
             <FaShareSquare className="project-icon"/> 
-          </a>
+            </a>
+          }
+          
         </div>
         </div>
 

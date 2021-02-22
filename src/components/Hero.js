@@ -3,6 +3,7 @@ import Image from "gatsby-image"
 import { Link } from "gatsby"
 import { graphql, useStaticQuery } from "gatsby"
 import SocialLinks from "../constants/socialLinks"
+import Typed from "react-typed"
 // ...GatsbyImageSharpFluid
 const query = graphql`
 {
@@ -23,9 +24,25 @@ const Hero = () => {
       <article className="hero-info">
         <div>
           <div className="underline"></div>
-          <h1>Im Diego</h1>
-            <h4>Developer Full stack Web</h4>
-            <Link to="/contact" className="btn">Contact me</Link>
+            <h1>Diego Motta</h1>
+            <h3>
+              <Typed loop
+                    typeSpeed={80}
+                    backSpeed={20}
+                    strings={[
+                      "Lic. en Sistemas",
+                      "Desarrollador Full Stack Web",
+                    ]} 
+                    smartBackspace
+                    backDelay={1000}
+                    loopCount={0}
+                    showCursor
+                    cursorChar="|"
+                    className="typed" 
+                    />
+              </h3>
+              <h4>¿Tenes un proyecto o una idea ?</h4>
+            <Link to="/contact" className="btn">Contactame</Link>
             <SocialLinks/>
         </div>
       </article>

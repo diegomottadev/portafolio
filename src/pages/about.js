@@ -4,17 +4,22 @@ import { graphql } from "gatsby"
 import Title from "../components/Title"
 import Image from "gatsby-image"
 import SEO from "../components/SEO"
+import ReactMarkdown from "react-markdown"
 const About = ({data:{about:{nodes}}}) => {
   const {title,description,image,stack} = nodes[0];
+ 
+  const location = window.location;
+
   return (
-    <Layout>
-      <SEO title="About" description="about web dev"/>
+    <Layout page={location.pathname}>
+      <SEO title="Sobre mi" description="about web dev"/>
       <section className="about-page">
         <div className="section-center about-center">
           <Image fluid={image.childImageSharp.fluid} className="about-img"/>
           <article className="about-text">
             <Title title={title}/>
-            <p>{description}</p>
+            <p><ReactMarkdown source={description}/></p>
+            
             <div className="about-stack">
               {stack.map(item =>{
                 return <span className="" key={item.id}>{item.skill}</span>

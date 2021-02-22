@@ -16,17 +16,17 @@ export default ({data}) => {
   const {allStrapiProjects:{nodes:projects},allStrapiBlogs:{nodes:blogs}} = data;
 
   return (<Layout>
-    <SEO title="HOME"/>
-    <Hero></Hero>
-    <Services/>
-    <Jobs/>
-    <Projects projects={projects} title="featured projects" showLink/>
-    <Blogs blogs={blogs} title="latest articles" showLink/>
-  </Layout>)
+            <SEO title="HOME"/>
+            <Hero></Hero>
+            <Services/>
+            <Jobs/>
+            <Projects projects={projects} title="Proyectos" showLink/>
+            {/* <Blogs blogs={blogs} title="latest articles" showLink/> */}
+        </Layout>)
 }
 // ...GatsbyImageSharpFluid
 export const query = graphql`{
-  allStrapiProjects(filter: {feature: {eq: false}}) {
+  allStrapiProjects(filter: {feature: {eq: false}},limit: 3) {
     nodes {
       github
       id

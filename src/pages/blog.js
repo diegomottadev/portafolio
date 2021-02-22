@@ -7,8 +7,9 @@ import SEO from "../components/SEO"
 
 const Blog = ({data:{allStrapiBlogs:{nodes:blogs}}}) => {
 
-
-  return (<Layout>
+  const location = window.location;
+  
+  return (<Layout page={location.pathname}>
             <SEO title="Blog" description="latest articles"/>
             <section className="blog-page">
               <Blogs blogs={blogs} title="blog"></Blogs>

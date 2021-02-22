@@ -1,37 +1,39 @@
 import React from "react"
 import {
-  FaFacebookSquare,
   FaLinkedin,
   FaDribbbleSquare,
   FaBehanceSquare,
-  FaTwitterSquare,
+  FaInstagram,
+  FaReddit,
+  FaGithub,
+  FaGitlab,
 } from "react-icons/fa"
 
 const data = [
   {
     id: 1,
-    icon: <FaFacebookSquare className="social-icon"></FaFacebookSquare>,
-    url: "https://www.twitter.com",
+    icon: <FaLinkedin className="social-icon"></FaLinkedin>,
+    url: "https://www.linkedin.com/in/diegoivanmotta/",
   },
   {
     id: 2,
-    icon: <FaLinkedin className="social-icon"></FaLinkedin>,
-    url: "https://www.twitter.com",
+    icon: <FaInstagram className="social-icon"></FaInstagram>,
+    url: "https://www.instagram.com/diegomottadev/",
   },
   {
     id: 3,
-    icon: <FaDribbbleSquare className="social-icon"></FaDribbbleSquare>,
-    url: "https://www.twitter.com",
+    icon: <FaReddit className="social-icon"></FaReddit>,
+    url: "https://www.reddit.com/user/diegomottadev",
   },
   {
     id: 4,
-    icon: <FaBehanceSquare className="social-icon"></FaBehanceSquare>,
-    url: "https://www.twitter.com",
+    icon: <FaGithub className="social-icon"></FaGithub>,
+    url: "https://github.com/diegomottadev",
   },
   {
     id: 5,
-    icon: <FaTwitterSquare className="social-icon"></FaTwitterSquare>,
-    url: "https://www.twitter.com",
+    icon: <FaGitlab className="social-icon"></FaGitlab>,
+    url: "https://gitlab.com/diegomotta18",
   },
 ]
 const links = data.map(link => {

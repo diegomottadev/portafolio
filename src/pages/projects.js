@@ -6,11 +6,14 @@ import SEO from "../components/SEO"
 // ...GatsbyImageSharpFluid
 
 const ProjectsPage = ({data:{allStrapiProjects:{nodes:projects}}}) =>{
+  
+  const location = window.location;
+
   return (
-      <Layout>
-        <SEO title="Projects" description="Projects developed"/>
+    <Layout page={location.pathname}>
+        <SEO title="Proyectos" description="Proyectos personales"/>
         <section className="projects-page">
-          <Projects projects={projects} title="All projects"/>
+          <Projects projects={projects} title="Proyectos"/>
         </section>
       </Layout>
     )

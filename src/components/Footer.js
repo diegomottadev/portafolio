@@ -6,7 +6,7 @@ const Footer = () => {
         <div>
           <SocialLinks styleClass="footer-links"></SocialLinks>
           <h4>copyright&copy;{new Date().getFullYear}
-          <span>Diego Motta</span> all rights reserved
+          <span>Diego Motta</span> todos los derechos reservados
           </h4>
         </div>
       </footer>
