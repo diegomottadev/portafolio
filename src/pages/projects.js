@@ -11,7 +11,7 @@ const ProjectsPage = ({data:{allStrapiProjects:{nodes:projects}}}) =>{
 
   return (
     <Layout page={location.pathname}>
-        <SEO title="Proyectos" description="Proyectos personales"/>
+        <SEO title="Proyectos" description="Mis proyectos"/>
         <section className="projects-page">
           <Projects projects={projects} title="Proyectos"/>
         </section>

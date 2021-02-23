@@ -10,7 +10,7 @@ const Blog = ({data:{allStrapiBlogs:{nodes:blogs}}}) => {
   const location = window.location;
   
   return (<Layout page={location.pathname}>
-            <SEO title="Blog" description="latest articles"/>
+            <SEO title="Blog" description="Ultimos artículos"/>
             <section className="blog-page">
               <Blogs blogs={blogs} title="blog"></Blogs>
             </section>

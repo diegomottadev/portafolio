@@ -12,7 +12,7 @@ const About = ({data:{about:{nodes}}}) => {
 
   return (
     <Layout page={location.pathname}>
-      <SEO title="Sobre mi" description="about web dev"/>
+      <SEO title="Sobre mi" description="¿Quién soy?"/>
       <section className="about-page">
         <div className="section-center about-center">
           <Image fluid={image.childImageSharp.fluid} className="about-img"/>
