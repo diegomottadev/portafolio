@@ -26,6 +26,7 @@ const query = graphql`
 
 
 const Jobs = () => {
+
   const data = useStaticQuery(query);
   const {allStrapiJobs:{nodes:jobs}} = data;
   const [value,setValue] = React.useState(0);

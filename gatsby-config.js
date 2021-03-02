@@ -30,8 +30,8 @@ module.exports = {
       options: {
         apiURL: `http://localhost:1337`,
         queryLimit: 1000, // Default to 100
-        contentTypes: [`jobs`,`projects`,`blogs`],
-        singleTypes:[`about` ],
+        contentTypes: [`jobs`,`projects`,`freelances`,`blogs`],
+        singleTypes:[`about`],
       },
     },
     // {
@@ -48,5 +48,27 @@ module.exports = {
     //     },
     //   },
     // },
+
+
+
+
+    // allStrapiBlogs(sort: {fields: date, order: DESC}, limit: 3) {
+    //   nodes {
+    //     slug
+    //     description
+    //     desc
+    //     date(formatString: "MMMM Do, YYYY")
+    //     id
+    //     title
+    //     category
+    //     image {
+    //       childImageSharp {
+    //         fluid {
+    //         ...GatsbyImageSharpFluid
+    //         }
+    //       }
+    //     }
+    //   }
+    // }
   ],
 }

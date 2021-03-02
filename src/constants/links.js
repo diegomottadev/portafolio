@@ -16,6 +16,11 @@ const data = [
     text: "proyectos",
     url: "/projects/",
   },
+  {
+    id: 4,
+    text: "freelances",
+    url: "/freelances/",
+  },
  
   {
     id: 5,
