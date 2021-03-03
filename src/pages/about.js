@@ -6,6 +6,7 @@ import Image from "gatsby-image"
 import SEO from "../components/SEO"
 import ReactMarkdown from "react-markdown"
 const About = ({data:{about:{nodes}}}) => {
+
   const {title,description,image,stack} = nodes[0];
  
   const location = window.location;
